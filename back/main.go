@@ -12,7 +12,7 @@ func main() {
 
 	router.LoadHTMLGlob("front/templates/index.html")
 
-	router.HEAD("/js", JSHandler)
+	router.Static("/js", "./js/index.js")
 
 	router.GET("/", func(ctx *gin.Context) {
 		ctx.HTML(http.StatusOK, "index.html", gin.H{"title": "Home Page"})
@@ -21,6 +21,6 @@ func main() {
 	router.Run()
 }
 
-func JSHandler(c *gin.Context) {
-	c.Writer.Header().Set("Content-Type", "application/x-javascript")
-}
+//func JSHandler(c *gin.Context) {
+//	c.Writer.Header().Set("Content-Type", "application/x-javascript")
+//}
