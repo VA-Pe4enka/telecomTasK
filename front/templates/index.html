@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Регистрация обращения</title>
+    <style>
+        div.field {
+            padding-bottom: 5px;
+        }
+
+        div.field label {
+            display: block;
+            float: left;
+            width: 110px;
+            height: 15px;
+        }
+    </style>
+</head>
+
+<body>
+
+
+<form id="main-form" method="post">
+
+
+
+    <div class="field">
+        <label for="surname">Фамилия:</label>
+        <input type="text" name="surname" placeholder="Фамилия" id="surname"><br><br>
+    </div>
+    <div class="field">
+        <label for="name">Имя:</label>
+        <input type="text" name="name" placeholder="Имя" id="name"><br><br>
+    </div>
+    <div class="field">
+        <label for="patronymic">Отчество:</label>
+        <input type="text" name="patronymic" placeholder="Отчество" id="patronymic"><br><br>
+    </div>
+    <div class="field">
+        <label for="phoneNum">Телефон:</label>
+        <input type="text" name="phoneNum" placeholder="Телефон" id="phoneNum"><br><br>
+    </div>
+    <div class="field">
+        <label for="text">Обращение:</label>
+        <textarea name="text" placeholder="Ваше обращение" id="text"></textarea><br>
+    </div>
+
+    <button onclick="onClickButton(this)">Нажмите для отправки</button>
+
+    <script src="/front/index.js">alert(1)</script>
+</form>
+</body>
+</html>
