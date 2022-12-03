@@ -1,3 +1,4 @@
+
 function makeStruct(names) {
     names = names.split(' ');
     var count = names.length;
@@ -16,13 +17,22 @@ tip = new makeStruct("surname", "name", "patronymic", "phoneNum", "text");
 function onClickButton() {
 
     let data = new tip;
-    data.surname = document.getElementById('surname').value;
-    data.name = document.getElementById('name').value;
-    data.patronymic = document.getElementById('patronymic').value;
-    data.phoneNum = document.getElementById('phoneNum').value;
-    data.text = document.getElementById('text').value;
+    data.surname = $('#surname').val();
+    data.name = $('#name').val();
+    data.patronymic = $('#patronymic').val();
+    data.phoneNum = $('#phoneNum').val();
+    data.text = $('#text').val();
 
     console.log(data);
+
+    $.ajax({
+        type: 'POST',
+        url: "http://localhost:8080/data",
+        data: data,
+        success: "",
+        dataType: dataType
+    });
+
 
     return false;
 }

@@ -8,7 +8,6 @@ import (
 var router *gin.Engine
 
 func main() {
-
 	router = gin.Default()
 
 	router.LoadHTMLGlob("front/templates/index.html")
@@ -18,5 +17,4 @@ func main() {
 	})
 
 	router.Run()
-
 }

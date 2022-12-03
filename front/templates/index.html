@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
+
+
     <meta charset="UTF-8">
     <title>Регистрация обращения</title>
     <style>
@@ -18,12 +21,7 @@
 </head>
 
 <body>
-
-
-<form id="main-form" method="post">
-
-
-
+<form id="main-form" method="post" >
     <div class="field">
         <label for="surname">Фамилия:</label>
         <input type="text" name="surname" placeholder="Фамилия" id="surname"><br><br>
@@ -44,10 +42,13 @@
         <label for="text">Обращение:</label>
         <textarea name="text" placeholder="Ваше обращение" id="text"></textarea><br>
     </div>
+    <button onclick="return onClickButton(this)">Нажмите для отправки</button>
 
-    <button onclick="onClickButton(this)">Нажмите для отправки</button>
 
-    <script src="/front/index.js">alert(1)</script>
 </form>
+
+<script src="/public/js/index.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
 </body>
 </html>
