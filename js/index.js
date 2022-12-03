@@ -1,4 +1,5 @@
 
+
 function makeStruct(names) {
     names = names.split(' ');
     var count = names.length;
@@ -25,13 +26,13 @@ function onClickButton() {
 
     console.log(data);
 
-    $.ajax({
-        type: 'POST',
-        url: "http://localhost:8080/data",
-        data: data,
-        success: "",
-        dataType: dataType
-    });
+    // $.ajax({
+    //     type: 'POST',
+    //     url: "http://localhost:8080/data",
+    //     data: data,
+    //     success: "",
+    //     dataType: dataType
+    // });
 
 
     return false;
